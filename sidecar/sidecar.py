@@ -90,6 +90,7 @@ def main():
     payload = os.getenv('REQ_PAYLOAD')
 
     config.load_incluster_config()
+    Configuration._default.verify_ssl = False
     print("Config for cluster api loaded...")
     namespace = open("/var/run/secrets/kubernetes.io/serviceaccount/namespace").read()
     watchForChanges(label, targetFolder, url, method, payload, namespace)
