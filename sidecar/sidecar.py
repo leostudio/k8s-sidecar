@@ -1,4 +1,5 @@
 from kubernetes import client, config, watch
+from kubernetes.client import Configuration
 import os
 import sys
 import requests
